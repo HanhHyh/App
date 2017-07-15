@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script src="js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		
+		
+		
+		<!--<div class="bar bar-header bar-positive item-input-inset">
+			<label for="" class="item-input-wrapper">
+				<i class="icon ion-ios-search placeholder-icon"></i>
+				<input type="search" name="" id="" value="" placeholder="搜索"/>
+			</label>
+			<button class="button button-clear button-outline">
+				<i class="icon ion-android-apps"></i>
+			</button>
+		</div>-->
+		
+		<ion-nav-bar class="bar-positive">
+	      <ion-nav-back-button></ion-nav-back-button>
+	    </ion-nav-bar>
+		
+		<ion-nav-view></ion-nav-view>
+		
+		<!--<div class="tabs-color-light">
+			
+		</div>-->
+
+    <script id="templates/tabs.html" type="text/ng-template">
+      <ion-tabs class="tabs-icon-only tabs-default tabs-color-active-positive">
+			<!--href="#/tab/home" == ui-sref="tabs.home" 这是相等-->
+        <ion-tab title="Home" icon="ion-android-list" href="#/tab/home">
+          <ion-nav-view name="home-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Compass" icon="ion-android-compass" href="#/tab/compass">
+          <ion-nav-view name="compass-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Contact" icon="ion-android-notifications" ui-sref="tabs.contact">
+          <ion-nav-view name="contact-tab"></ion-nav-view>
+        </ion-tab>
+        
+       <ion-tab title="Chat" icon="ion-android-chat" ui-sref="tabs.chat">
+          <ion-nav-view name="chat-tab"></ion-nav-view>
+        </ion-tab>
+        
+       <ion-tab title="Menu" icon="ion-android-menu" ui-sref="tabs.menu">
+          <ion-nav-view name="menu-tab"></ion-nav-view>
+        </ion-tab>
+        
+      </ion-tabs>
+    </script>
+
+    <script id="templates/home.html" type="text/ng-template">
+      <ion-view view-title="主页">
+        <ion-content class="">
+        <div class="list card" style="margin: 0;">
+        	
+		  <label class="item item-input">
+		    <i class="icon ion-search placeholder-icon"></i>
+		    <input type="text" placeholder="搜你想要的">
+		    <button class="button button-positive button-clear">
+			    搜索
+			</button>
+		  </label>
+		  
+			<div class="item item-divider" style="min-height: 10px; padding: 0;"></div>
+			<div class="item item-avatar">
+				<img src="img/222.jpg"/>
+				<p style="padding: 5px;"></p>
+				<p class="">来自话题：<span>Java 程序员</span><i class="icon ion-android-close" style="float: right;"></i></p>
+			</div>
+			<div class="item item-body">
+				<b>程序员的告白方式</b>
+				<p>作为一名闪闪发光的程序猿，你有什么特别的表白方式吗？
+				我听过一个悲情的表白惨剧，是酱紫：
+				某君原本设定的台词是这样是不是很浪漫，虽然明显是借鉴了王小波啊~
+				但是！约出来以后特紧张，说出来却成了这样：
+				“XX，我喜欢你，每当想起你这张丑脸，我就泛起了微笑！”
+				当然就没有蓝后了......
+				</p>
+				 <p>
+			      <a href="#" class="subdued">114赞同</a>
+			      <a href="#" class="subdued">21评论</a>
+			      <a href="#" class="subdued">关注问题</a>
+			    </p>
+			</div>
+			
+			<div class="item item-divider" style="min-height: 10px; padding: 0;"></div>
+			<div class="item item-avatar">
+				<img src="img/222.jpg"/>
+				<p style="padding: 5px;"></p>
+				<p class="">来自话题：<span>Java 程序员</span><i class="icon ion-android-close" style="float: right;"></i></p>
+			</div>
+			<div class="item item-body">
+				<b>程序员的告白方式</b>
+				<p>作为一名闪闪发光的程序猿，你有什么特别的表白方式吗？
+				我听过一个悲情的表白惨剧，是酱紫：
+				某君原本设定的台词是这样是不是很浪漫，虽然明显是借鉴了王小波啊~
+				但是！约出来以后特紧张，说出来却成了这样：
+				“XX，我喜欢你，每当想起你这张丑脸，我就泛起了微笑！”
+				当然就没有蓝后了......
+				</p>
+				 <p>
+			      <a href="#" class="subdued">114赞同</a>
+			      <a href="#" class="subdued">21评论</a>
+			      <a href="#" class="subdued">关注问题</a>
+			    </p>
+			</div>
+			
+			<div class="item item-divider" style="min-height: 10px; padding: 0;"></div>
+			<div class="item item-avatar">
+				<img src="img/222.jpg"/>
+				<p style="padding: 5px;"></p>
+				<p class="">来自话题：<span>Java 程序员</span><i class="icon ion-android-close" style="float: right;"></i></p>
+			</div>
+			<div class="item item-body">
+				<b>程序员的告白方式</b>
+				<p>作为一名闪闪发光的程序猿，你有什么特别的表白方式吗？
+				我听过一个悲情的表白惨剧，是酱紫：
+				某君原本设定的台词是这样是不是很浪漫，虽然明显是借鉴了王小波啊~
+				但是！约出来以后特紧张，说出来却成了这样：
+				“XX，我喜欢你，每当想起你这张丑脸，我就泛起了微笑！”
+				当然就没有蓝后了......
+				</p>
+				 <p>
+			      <a href="#" class="subdued">114赞同</a>
+			      <a href="#" class="subdued">21评论</a>
+			      <a href="#" class="subdued">关注问题</a>
+			    </p>
+			</div>
+			
+		</div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <!--<script id="templates/facts.html" type="text/ng-template">
+      <ion-view view-title="Facts">
+        <ion-content class="padding">
+          <p>Banging your head against a wall uses 150 calories an hour.</p>
+          <p>Dogs have four toes on their hind feet, and five on their front feet.</p>
+          <p>The ant can lift 50 times its own weight, can pull 30 times its own weight and always falls over on its right side when intoxicated.</p>
+          <p>A cockroach will live nine days without it's head, before it starves to death.</p>
+          <p>Polar bears are left handed.</p>
+          <p>
+            <a class="button icon ion-home" href="#/tab/home"> Home</a>
+            <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2">More Facts</a>
+          </p>
+        </ion-content>
+      </ion-view>
+    </script>-->
+
+    <!--<script id="templates/facts2.html" type="text/ng-template">
+      <ion-view view-title="Also Factual">
+        <ion-content class="padding">
+          <p>111,111,111 x 111,111,111 = 12,345,678,987,654,321</p>
+          <p>1 in every 4 Americans has appeared on T.V.</p>
+          <p>11% of the world is left-handed.</p>
+          <p>1 in 8 Americans has worked at a McDonalds restaurant.</p>
+          <p>$283,200 is the absolute highest amount of money you can win on Jeopardy.</p>
+          <p>101 Dalmatians, Peter Pan, Lady and the Tramp, and Mulan are the only Disney cartoons where both parents are present and don't die throughout the movie.</p>
+          <p>
+            <a class="button icon ion-home" href="#/tab/home"> Home</a>
+            <a class="button icon ion-chevron-left" href="#/tab/facts"> Scientific Facts</a>
+          </p>
+        </ion-content>
+      </ion-view>
+    </script>-->
+
+    <script id="templates/compass.html" type="text/ng-template">
+      <ion-view view-title="Compass">
+        <ion-content class="padding">
+          <h3>Create hybrid mobile apps with the web technologies you love.</h3>
+          <p>Free and open source, Ionic offers a library of mobile-optimized HTML, CSS and JS components for building highly interactive apps.</p>
+          <p>Built with Sass and optimized for AngularJS.</p>
+          <p>
+            <a class="button icon icon-right ion-chevron-right" href="#/tab/navstack">Tabs Nav Stack</a>
+          </p>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <!--<script id="templates/nav-stack.html" type="text/ng-template">
+      <ion-view view-title="Tab Nav Stack">
+        <ion-content class="padding">
+          <p><img src="http://ionicframework.com/img/diagrams/tabs-nav-stack.png" style="width:100%"></p>
+        </ion-content>
+      </ion-view>
+    </script>-->
+
+    <script id="templates/contact.html" type="text/ng-template">
+      <ion-view title="Contact">
+        <ion-content>
+          <div class="list">
+            <div class="item">
+              @IonicFramework
+            </div>
+            <div class="item">
+              @DriftyTeam
+            </div>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+	<script id="templates/chat.html" type="text/ng-template">
+      <ion-view title="Chat">
+        <ion-content>
+          <div class="list">
+            <div class="item">
+              123
+            </div>
+            <div class="item">
+             456
+            </div>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+    
+    <script id="templates/menu.html" type="text/ng-template">
+      <ion-view title="Menu">
+        <ion-content>
+          <div class="list">
+            <div class="item">
+              ggg
+            </div>
+            <div class="item">
+             ggg
+            </div>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+
+
+<script type="text/javascript">
+	angular.module('app', ['ionic'])
+
+.config(function($stateProvider, $urlRouterProvider) {
+
+  $stateProvider
+    .state('tabs', {
+      url: "/tab",
+      templateUrl: "templates/tabs.html"
+    })
+    .state('tabs.home', {
+      url: "/home",
+      views: {
+        'home-tab': {
+          templateUrl: "templates/home.html",
+          controller: 'HomeTabCtrl'
+        }
+      }
+    })
+//  .state('tabs.facts', {
+//    url: "/facts",
+//    views: {
+//      'home-tab': {
+//        templateUrl: "templates/facts.html"
+//      }
+//    }
+//  })
+//  .state('tabs.facts2', {
+//    url: "/facts2",
+//    views: {
+//      'home-tab': {
+//        templateUrl: "templates/facts2.html"
+//      }
+//    }
+//  })
+    .state('tabs.compass', {
+      url: "/compass",
+      views: {
+        'compass-tab': {
+          templateUrl: "templates/compass.html"
+        }
+      }
+    })
+//  .state('tabs.navstack', {
+//    url: "/navstack",
+//    views: {
+//      'compass-tab': {
+//        templateUrl: "templates/nav-stack.html"
+//      }
+//    }
+//  })
+    .state('tabs.contact', {
+      url: "/contact",
+      views: {
+        'contact-tab': {
+          templateUrl: "templates/contact.html"
+        }
+      }
+    })
+    .state('tabs.chat',{
+    	url:'/chat',
+    	views:{
+    		'chat-tab':{
+    			templateUrl:'templates/chat.html'
+    		}
+    	}
+    })
+    
+    .state('tabs.menu',{
+    	url:'/menu',
+    	views:{
+    		'menu-tab':{
+    			templateUrl:'templates/menu.html'
+    		}
+    	}
+    })
+    ;
+
+
+   $urlRouterProvider.otherwise("/tab/home");
+
+})
+
+.controller('HomeTabCtrl', function($scope) {
+  console.log('HomeTabCtrl');
+});
+</script>
+	</body>
+</html>
